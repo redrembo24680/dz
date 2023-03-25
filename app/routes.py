@@ -1,6 +1,6 @@
 from app import app
 from random import randrange
-from flask import render_template
+
 
 
 @app.route("/")
