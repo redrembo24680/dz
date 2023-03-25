@@ -1,19 +1,19 @@
-from app import exm
+from app import app
 from random import randrange
 from flask import render_template
-@exm.route("/")
+
+
+@app.route("/")
 def index():
     list_ = [randrange(1, 200) for x in range(15)]
     list_.sort()
     return list_
 
 
-@exm.route("/personal")
+@app.route("/personal")
 def personal():
-    person = {
-        "Ім\'я" : "Roman",
-        "Вік" : 16,
-        "Країна" : "Ukraine",
-    }
-    person.__getitem__
-    return render_template('personal.html', content = person )
+        name = "Roman"
+        age = 16
+        country = "Ukraine"
+        return f"моє імя {name} мій вік {age} моя країна {country}"
+
